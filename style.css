@@ -238,7 +238,7 @@ section { padding: 60px 0; }
   justify-content: space-between;
   align-items: center;
   gap: 20px;
-}  
+} 
 
 /* Contato */
 .contact { display: grid; grid-template-columns: 1.1fr .9fr; gap: 30px; }
