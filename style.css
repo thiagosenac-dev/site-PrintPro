@@ -90,9 +90,16 @@
   .card .chip{display:inline-flex;gap:.5rem;align-items:center;margin-top:10px;font-size:.85rem;color:var(--muted)}
   
   /* Diferenciais */
+
+.ajuste{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 14px;
+}
   .features{display:grid;grid-template-columns: repeat(3, 1fr);gap:18px}
   .feature{background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
-    border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
+    border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)}
   .feature h4{margin:6px 0 8px}
   
   /* Depoimentos */
