@@ -36,6 +36,9 @@ img { max-width: 100%; display: block; }
   margin-inline: auto;
 }
 
+/* --- Controle de Visibilidade Responsiva --- */
+.mobile-only { display: none; } /* Esconde no PC por padrão */
+
 /* --- Header --- */
 header {
   position: sticky;
@@ -329,8 +332,11 @@ footer { padding: 40px 0; border-top: 1px solid rgba(255,255,255,0.05); margin-t
    RESPONSIVIDADE (MEDIA QUERIES)
    ============================================================ */
 
-/* Tablets e Telas Médias */
 @media (max-width: 980px) {
+  /* Alternância de visibilidade */
+  .desktop-only { display: none !important; }
+  .mobile-only { display: block !important; }
+  
   .hero .grid, 
   .contact, 
   .cta-block { 
@@ -350,9 +356,14 @@ footer { padding: 40px 0; border-top: 1px solid rgba(255,255,255,0.05); margin-t
   .features { grid-template-columns: repeat(2, 1fr); }
 
   .cta-block { flex-direction: column; }
+
+  /* Ajuste de margem para o card que desceu */
+  .mobile-only .hero-card {
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
 }
 
-/* Celulares (Mobile First Adjustments) */
 @media (max-width: 600px) {
   :root { --radius: 12px; }
 
@@ -362,14 +373,12 @@ footer { padding: 40px 0; border-top: 1px solid rgba(255,255,255,0.05); margin-t
   .section-title { font-size: 1.6rem; text-align: center; }
   .section-sub { text-align: center; }
 
-  /* Grid em coluna única para mobile */
   .cards, 
   .features,
   .stat { 
     grid-template-columns: 1fr; 
   }
 
-  /* Botões fáceis de tocar */
   .btn, .btn-card {
     width: 100%;
     padding: 1.1rem;
@@ -378,15 +387,12 @@ footer { padding: 40px 0; border-top: 1px solid rgba(255,255,255,0.05); margin-t
 
   .cta { flex-direction: column; }
 
-  .hero-card { margin-top: 20px; }
-
   .foot {
     flex-direction: column;
     gap: 1.5rem;
     text-align: center;
   }
 
-  /* Ajuste visual do menu no mobile */
   nav ul {
     width: 100%;
     justify-content: center;
@@ -395,7 +401,6 @@ footer { padding: 40px 0; border-top: 1px solid rgba(255,255,255,0.05); margin-t
   
   nav a { font-size: 0.8rem; }
 
-  /* WhatsApp ocupa a largura da tela para destaque no mobile */
   .wpp {
     right: 15px;
     left: 15px;
