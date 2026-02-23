@@ -21,7 +21,7 @@ html, body {
 
 body {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  background: radial-gradient(1200px 600px at 80% -10%, rgba(79, 140, 255, .15), transparent 60%) var(--bg);
+  background: radial-gradient(1200px 600px at 80% -10%, rgba(79, 140, 255, .15), transparent 0%) var(--bg);
   color: var(--text);
   line-height: 1.55;
 }
@@ -414,5 +414,6 @@ footer { padding: 40px 0; border-top: 1px solid rgba(255,255,255,0.05); margin-t
     text-align: center;
   }
 }
+
 
 
